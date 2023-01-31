@@ -17,12 +17,14 @@
     "lint": "cross-env NODE_ENV=production eslint . --ext .mjs --ext .cjs",
     "lint:fix": "npm run lint -- --fix",
     "test": "cross-env NODE_ENV=test mocha tests --recursive --verbose --color",
+    "axios": "node scripts/axios.mjs",
     "fetch": "node scripts/fetch.mjs",
     "curl": "node scripts/curl.mjs",
     "client": "node scripts/client.mjs"
   },
   "dependencies": {
-    "@keycloak/keycloak-admin-client": "^20.0.3"
+    "@keycloak/keycloak-admin-client": "^20.0.3",
+    "axios": "^1.2.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",

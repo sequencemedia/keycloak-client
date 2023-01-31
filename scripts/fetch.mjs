@@ -14,9 +14,14 @@ fetch('http://localhost:8080/realms/master/protocol/openid-connect/token', {
 })
   .then((response) => response.json())
   .then(({ access_token: accessToken }) => {
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${accessToken}`
+    }
+
     return Promise.all([
-      fetch('http://localhost:8080/admin/realms/master/users', { headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${accessToken}` } }),
-      fetch('http://localhost:8080/admin/realms/master/roles', { headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${accessToken}` } })
+      fetch('http://localhost:8080/admin/realms/master/users', { headers }),
+      fetch('http://localhost:8080/admin/realms/master/roles', { headers })
     ])
   })
   .then(([users, roles]) => {

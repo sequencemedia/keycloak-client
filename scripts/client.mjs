@@ -3,7 +3,7 @@ import KcAdminClient from '@keycloak/keycloak-admin-client'
 /**
  *  `@keycloak/keycloak-admin-client` doesn't correctly serialise passwords which contain escapable characters
  *
- *  (It's just a fetch request)
+ *  (It's just a fetch request, and I have accounted for it in my own fetch implementation)
  */
 
 {

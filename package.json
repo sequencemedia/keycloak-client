@@ -17,6 +17,7 @@
     "lint": "cross-env NODE_ENV=production eslint . --ext .mjs --ext .cjs",
     "lint:fix": "npm run lint -- --fix",
     "test": "cross-env NODE_ENV=test mocha tests --recursive --verbose --color",
+    "fetch": "node scripts/fetch.mjs",
     "curl": "node scripts/curl.mjs",
     "client": "node scripts/client.mjs"
   },

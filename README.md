@@ -1,10 +1,8 @@
-# the-curl
+# the-keycloak
 
 _Q_. Can we validate a user by making a request to Keycloak?
 
 _A_. Yes
-
-There's no good reason why this was written for `curl` except I didn't trust any of the client packages (with good reason as it turns out)
 
 ## Prerequisites
 
@@ -50,10 +48,16 @@ Wherever you see the `username` and `password` combination put a pair of credent
 At the command line change into this directory and execute
 
 ```bash
+npm run fetch
+```
+
+I initially wrote for `curl` to swap into the shell
+
+```bash
 npm run curl
 ```
 
-I also tried a client package (it may not be the latest version) 
+I also tried a client package (it may not be the latest version)
 
 ```bash
 npm run client

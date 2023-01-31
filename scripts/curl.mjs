@@ -38,13 +38,13 @@ exec(ADMIN, (e, v) => {
   exec(USERS, (e, v) => {
     if (e) throw e
 
-    console.log('USERS', JSON.parse(v))
+    console.log(JSON.parse(v))
   })
 
   exec(ROLES, (e, v) => {
     if (e) throw e
 
-    console.log('ROLES', JSON.parse(v))
+    console.log(JSON.parse(v))
   })
 })
 

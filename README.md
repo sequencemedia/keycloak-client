@@ -51,13 +51,13 @@ At the command line change into this directory and execute
 npm run fetch
 ```
 
-I initially wrote for `curl` to swap into the shell
+I initially wrote for `curl`
 
 ```bash
 npm run curl
 ```
 
-I also tried a client package (it may not be the latest version)
+I also tried a client package (it may not be the latest version) but it poops
 
 ```bash
 npm run client

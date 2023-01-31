@@ -1,5 +1,5 @@
 {
-  "name": "@sequencemedia/the-curl",
+  "name": "@sequencemedia/the-keycloak",
   "version": "1.0.0",
   "main": "./index.mjs",
   "type": "module",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:sequencemedia/the-curl.git"
+    "url": "git@github.com:sequencemedia/the-keycloak.git"
   },
   "scripts": {
     "lint": "cross-env NODE_ENV=production eslint . --ext .mjs --ext .cjs",

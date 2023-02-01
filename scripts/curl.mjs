@@ -15,7 +15,7 @@ const ADMIN = `
     -d "username=admin" \
     -d "password=${encodeURIComponent('JPDf3X$eNUw@XB')}" \
     -d "grant_type=password" \
-    -d 'scope=openid'
+    -d "scope=openid"
 `
 
 exec(ADMIN, (e, v) => {
@@ -24,18 +24,18 @@ exec(ADMIN, (e, v) => {
   const { access_token: accessToken } = JSON.parse(v)
 
   const USERS = `
-      curl \
-        -H "Content-Type: application/json" \
-        -H "Authorization: Bearer ${accessToken}" \
-        "http://localhost:8080/admin/realms/master/users"
-    `
+    curl \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer ${accessToken}" \
+      "http://localhost:8080/admin/realms/master/users"
+  `
 
   const ROLES = `
-      curl \
-        -H "Content-Type: application/json" \
-        -H "Authorization: Bearer ${accessToken}" \
-        "http://localhost:8080/admin/realms/master/roles"
-    `
+    curl \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer ${accessToken}" \
+      "http://localhost:8080/admin/realms/master/roles"
+  `
 
   exec(USERS, (e, v) => {
     if (e) throw e
@@ -85,7 +85,7 @@ const THE_USER_1 = `
     -d "grant_type=password" \
     -d "username=the-user-1" \
     -d "password=${encodeURIComponent('$b!6A6t7M7URi.')}" \
-    -d 'scope=openid' \
+    -d "scope=openid" \
     "http://localhost:8080/realms/master/protocol/openid-connect/token"
 `
 
@@ -106,7 +106,7 @@ const THE_USER_2 = `
     -d "grant_type=password" \
     -d "username=the-user-2" \
     -d "password=${encodeURIComponent('CJPRki*Qx4GsL9')}"\
-    -d 'scope=openid' \
+    -d "scope=openid" \
     "http://localhost:8080/realms/master/protocol/openid-connect/token"
 `
 
@@ -127,7 +127,7 @@ const THE_USER_3 = `
     -d "grant_type=password" \
     -d "username=the-user-3" \
     -d "password=${encodeURIComponent('Q*edKXB@@u#7kN')}"\
-    -d 'scope=openid' \
+    -d "scope=openid" \
     "http://localhost:8080/realms/master/protocol/openid-connect/token"
 `
 

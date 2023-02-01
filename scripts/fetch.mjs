@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 /**
  *  Keycloak master `admin` user (which we don't want to expose)

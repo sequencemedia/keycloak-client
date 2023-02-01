@@ -1,12 +1,12 @@
-# the-keycloak
+# keycloak-client
 
-_Q_. Can we validate a user by making a request to Keycloak?
+_Q_. Can we validate a user in Auth0 by making a request with their credentials to Keycloak?
 
 _A_. Yes
 
 ## Prerequisites
 
-You'll need to have the latest version of Keycloak running locally and configured
+You'll need the latest version of Keycloak running locally and configured
 
 In the _Settings_ tab I used the client ID `sequencemedia` ![client Settings tab](docs/client-settings.png) and enabled **client authentication** and **direct access grants** in the **Capability config** section (toward the bottom)
 
@@ -14,18 +14,16 @@ In the _Settings_ tab I used the client ID `sequencemedia` ![client Settings tab
 
 In the _Credentials_ tab I regenerated the client secret ![client Credentials tab](docs/client-credentials.png) _which you should regenerate even though you have just created the client, because I spent four hours tracking down an issue so that you don't have to_
 
-- Save the changes again
-
 You should put your client ID into the JS
 
 ```
--d "client_id=<YOUR CLIENT ID>" \
+-d "client_id=<CLIENT ID>" \
 ```
 
 And the client secret
 
 ```
--d "client_secret=${encodeURIComponent('<YOUR CLIENT SECRET>')}" \
+-d "client_secret=${encodeURIComponent('<CLIENT SECRET>')}" \
 ```
 
 I also created three users:
@@ -47,20 +45,20 @@ Wherever you see the `username` and `password` combination put a pair of credent
 
 At the command line change into this directory and execute
 
+For `fetch`
+
 ```bash
 npm run fetch
 ```
 
-I initially wrote for `curl`
+Alternatively for `axios`
+
+```bash
+npm run axios
+```
+
+Alternatively for `curl`
 
 ```bash
 npm run curl
 ```
-
-I also tried a client package (it may not be the latest version) but it poops
-
-```bash
-npm run client
-```
-
-But it _poops_. It only seems to be `fetch`, but it breaks on passwords which need escaping. (It shouldn't be hard to put these `curl` requests into `fetch` without the bork)

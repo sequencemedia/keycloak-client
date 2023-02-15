@@ -8,7 +8,7 @@
     "email": "sequencemedia@sequencemedia.net",
     "url": "http://sequencemedia.net"
   },
-  "license": "ISC",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git@github.com:sequencemedia/keycloak-client.git"
@@ -30,7 +30,6 @@
     "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-env": "^7.20.2",
     "@types/node": "^18.13.0",
-    "chai": "^4.3.7",
     "core-js": "^3.28.0",
     "eslint": "^8.34.0",
     "eslint-config-standard": "^17.0.0",
